@@ -12,14 +12,14 @@ body {
 }
 
 /* Container principal */
+@media (max-width: 1200px) {
 .container {
   display: flex;
-  margin-left: 15%;
+  justify-content: space-evenly;
   align-items: center;
   padding: 60px;
-  flex-direction: row;
+  flex-direction: column;
   padding-bottom: 200px;
-  flex-wrap: wrap;
 }
 
 .text-section {
@@ -77,15 +77,15 @@ body {
 }
 
 .image-section img {
-  max-width: 100%;
+  max-width: 250%;
   height: auto;
-  border-radius: 12px;
+  border-radius:12px;
 }
 
 /* Sobre */
 .Sobre {
-  background-image: url('assets/BB.jpg');
-  background-size: cover;
+  background-image: url('assets/black.JPG');
+  background-size: 100% 100%;
   background-position: center;
   background-repeat: no-repeat;
   padding: 50px;
@@ -111,7 +111,8 @@ body {
   background-color: rgba(51, 51, 51, 0.9);
   padding: 20px;
   border-radius: 12px;
-  flex: 1;
+  flex: 0;
+  min-width: 350px;
   max-width: 400px;
   box-shadow: 0 0 15px rgba(0,0,0,0.3);
   font-size: 24px;
@@ -126,12 +127,14 @@ body {
 /* Equipe */
 .bloco-equipe {
   background: rgba(51, 51, 51, 0.9);
-  padding: 16px;
+  padding: 16px;               
   border-radius: 10px;
-  flex: 1 1 300px;
-  font-size: 24px;
-  max-width: 550px;
+  flex: 1;
+  font-size: 24px;             
+  min-width: 200px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  width: 550px;                
+  height: auto;       
 }
 
 .bloco-equipe h3 {
@@ -151,7 +154,8 @@ body {
 
 /* Serviços */
 .serviços {
-  margin: 200px 5% 0 5%;
+  margin-left: 5%;
+  margin-top: 200px;
 }
 
 .serviços h3 {
@@ -164,14 +168,13 @@ body {
   display: flex;
   gap: 20px;
   flex-wrap: wrap;
-  justify-content: center;
 }
 
 .categoria {
   padding: 20px;
   border-radius: 10px;
-  flex: 1 1 250px;
-  max-width: 400px;
+  flex: 1;
+  min-width: 250px;
   text-align: center;
   font-size: 30px;
 }
@@ -191,36 +194,61 @@ body {
   margin-bottom: 8px;
 }
 
-/* Agendamento */
-.agendamento {
-  display: flex;
-  flex-wrap: wrap;
-  margin: 10% 5% 200px 5%;
-  justify-content: center;
-  gap: 40px;
+/* Responsivo */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    padding: 30px;
+  }
+
+  .text-section {
+    padding-right: 0;
+    text-align: center;
+  }
+
+  .cards, .categorias {
+    flex-direction: column;
+  }
 }
+
+/* nao estou conseguindo deixar o site responsivo em questao de aumentar e diminuir o tamanho a partir desta parte 
+Toda vez que coloco o @media (max-width entre 600px a 1024 o css quebra*/
+
+.agendamento{
+  display:flex;
+  margin-top: 10%;
+  margin-bottom: 200px;
+}
+
 
 .imagem-agendamento {
-  width: 100%;
-  max-width: 400px;
+  width: 388px;
+  min-width: 300px;
   height: auto;
   margin-top: 80px;
+  margin-left: 350px;
+  align-items: stretch;
+  /*aumentei o tamnha do imagem para ficar do msm tamnho que as informaçoes 
+  os textos aumentao e a imagem fica do msm tamanho (resolvi o da imagem :D)*/
 }
 
-.imagem-agendamento img {
+.imagem-agendamento img{
   max-width: 100%;
   border-radius: 20px;
+  flex-grow: 1;
+  flex-basis: 200;
 }
 
 .texto-agendamento {
-  width: 100%;
-  max-width: 600px;
+
+  width: 590px;
   height: auto;
   margin-top: 30px;
+  margin-left: 200px;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  font-size: 48px;
+  font-size: 64px;
 }
 
 .titulo-agendamento {
@@ -229,6 +257,11 @@ body {
   margin-bottom: 20px;
   padding-top: 50px;
   line-height: 1;
+ 
+}
+
+.servico-agendamento {
+  gap: 0px;
 }
 
 .legenda-agendamento {
@@ -236,6 +269,7 @@ body {
   font-weight: bold;
   margin-bottom: 0;
   margin-top: 10px;
+
 }
 
 .informacao-agendamento {
@@ -260,46 +294,39 @@ body {
   border: none;
   border-radius: 12px;
   cursor: pointer;
-  width: 100%;
-  max-width: 590px;
+  width: 590px;
   transition: background-color 0.3s;
 }
 
 .botao-agendamento:hover {
-  background-color: #B47B43;
+  background-color:  #B47B43;
   color: white;
 }
 
-/* Contato */
 .contato {
-  min-height: 100vh;
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 40px;
-  flex-wrap: wrap;
 }
-
-/* Endereço */
+/* msm coisa conforme aumenta o zoom da tela os textos sai do card, nao consegui arrumar (resolvido Tb :D )*/
 .endereco {
   background-color: rgba(51, 51, 51, 0.9);
-  padding: 20px;
+  padding: 20px 20px 20px 20px;
   border-radius: 12px;
-  flex: 1 1 300px;
-  max-width: 1000px;
+  flex: 0;
+  min-width: 1000px;
   box-shadow: 0 0 15px rgba(0,0,0,0.3);
   font-size: 24px;
-  margin: 100px auto;
+  margin-top: 500px;
+  margin-bottom: 500px;
 }
 
 .mapa {
-  width: 100%;
-  max-width: 950px;
-  height: auto;
-  min-height: 400px;
+  width: 950px;
+  height: 550px;
 }
-
-.endereco h3 {
+.endereco h3{
   font-size: 32px;
   margin-bottom: 30px;
   padding-top: 5px;
@@ -319,59 +346,52 @@ body {
   padding-top: 5px;
   font-size: 24px;
 }
-
-/* Footer */
-footer {
-  background-color: rgba(26, 26, 26, 0.9);
+footer{
+   background-color: rgba(26, 26, 26, 0.9);
 }
-
 .footer {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 50px;
-  padding: 100px 20px 20px 20px;
-  text-align: center;
+  justify-content: space-evenly;
+  align-items: center;
+  padding-top: 100px;;
+  padding-bottom: 50px;
+
 }
 
 .footer-contato,
-.footer-funcionamento,
-.footer-redes-sociais {
-  flex: 1 1 250px;
-  max-width: 350px;
+.footer-funcionamento {
+  text-align: center;
 }
-
-.footer-contato h2,
-.footer-funcionamento h2,
-.footer-redes-sociais h2 {
+.footer-contato h2{
   font-size: 30px;
-  margin-bottom: 20px;
-  text-align: left;
 }
-
-.footer-contato ul,
-.footer-funcionamento ul,
-.footer-redes-sociais ul {
+.footer-contato ul{
   font-size: 24px;
   text-align: left;
   list-style: none;
-  padding: 0;
 }
-
-.footer-redes-sociais a {
-  text-decoration: none;
-  color: inherit;
+.footer-funcionamento h2{
+  font-size: 30px;
 }
-
-.roda-pe {
-  width: 100%;
-  text-align: center;
-  padding: 20px;
-  margin-top: 20px;
-  border-top: 1px solid rgba(255,255,255,0.2);
+.footer-funcionamento ul{
+  font-size: 24px;
+  text-align: left;
+  list-style: none;
+}
+.footer-redes-sociais h2{
+  font-size: 30px;
+}
+.footer-redes-sociais ul{
+  font-size: 24px;
+  text-align: left;
+  list-style: none;
+  
+}
+.footer-redes-sociais a{
+    text-decoration: none;
+  color: inherit
 }
 
 .roda-pe p {
-  margin: 0;
-  font-size: 16px;
+  flex-grow: 1;
 }
