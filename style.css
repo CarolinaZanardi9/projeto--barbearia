@@ -2,13 +2,15 @@
 * {
   margin: 0;
   padding: 0;
+  margin-right: 0;
   box-sizing: border-box;
 }
 
-body {
+html body {
   background-color: #000;
   color: white;
-  line-height: 1.6;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 /* Container principal */
@@ -16,7 +18,6 @@ body {
   display: flex;
   margin-left: 5%;
   align-items: center;
-  padding: 60px;
   flex-direction: row;
   padding-bottom: 200px;
   flex-wrap: wrap;
@@ -80,15 +81,18 @@ body {
   max-width: 100%;
   height: auto;
   border-radius: 12px;
+  margin-top: 60px;
 }
 
 /* Sobre */
 .Sobre {
   background-image: url('assets/BB.jpg');
-  background-size: cover;
+  background-size: 100% 100% ;
   background-position: center;
-  background-repeat: no-repeat;
+  background-repeat: inherit;
   padding: 50px;
+  max-width: 100%;
+  height: auto;
   margin-top: 0;
   box-shadow: inset 0 0 80px rgba(0, 0, 0, 0.6);
 }
@@ -131,15 +135,15 @@ body {
 
 /* Equipe */
 .bloco-equipe {
-  background: rgba(51, 51, 51, 0.9);
-  padding: 16px;               
-  border-radius: 10px;
-  flex: 1;
-  font-size: 24px;             
-  min-width: 200px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-  width: 550px;                
-  height: auto;       
+  background-color: rgba(51, 51, 51, 0.9);
+  padding: 20px;
+  border-radius: 12px;
+  flex: 0;
+  min-width: 350px;
+  max-width: 550px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.3);
+  font-size: 24px;
+  gap: 20px;
 }
 
 .bloco-equipe h3 {
