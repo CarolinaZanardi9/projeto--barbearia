@@ -14,7 +14,7 @@ body {
 /* Container principal */
 .container {
   display: flex;
-  margin-left: 15%;
+  margin-left: 5%;
   align-items: center;
   padding: 60px;
   flex-direction: row;
@@ -85,7 +85,7 @@ body {
 /* Sobre */
 .Sobre {
   background-image: url('assets/BB.jpg');
-  background-size: cover;
+  background-size: 100% 100%;
   background-position: center;
   background-repeat: no-repeat;
   padding: 50px;
@@ -111,10 +111,12 @@ body {
   background-color: rgba(51, 51, 51, 0.9);
   padding: 20px;
   border-radius: 12px;
-  flex: 1;
-  max-width: 400px;
+  flex: 0;
+  min-width: 350px;
+  max-width: 550px;
   box-shadow: 0 0 15px rgba(0,0,0,0.3);
   font-size: 24px;
+  gap: 20px;
 }
 
 .card h3 {
@@ -123,15 +125,21 @@ body {
   color: #B47B43;
 }
 
+.card, .bloco-equipe {
+  margin-bottom: 20px;
+}
+
 /* Equipe */
 .bloco-equipe {
   background: rgba(51, 51, 51, 0.9);
-  padding: 16px;
+  padding: 16px;               
   border-radius: 10px;
-  flex: 1 1 300px;
-  font-size: 24px;
-  max-width: 550px;
+  flex: 1;
+  font-size: 24px;             
+  min-width: 200px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  width: 550px;                
+  height: auto;       
 }
 
 .bloco-equipe h3 {
@@ -147,6 +155,15 @@ body {
 
 .bloco-equipe li {
   margin-bottom: 10px;
+}
+
+.card, .bloco-equipe {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover, .bloco-equipe:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 0 25px rgba(180, 123, 67, 0.7);
 }
 
 /* Serviços */
@@ -373,5 +390,5 @@ footer {
 
 .roda-pe p {
   margin: 0;
-  font-size: 16px;
+  font-size: 16px;
 }
