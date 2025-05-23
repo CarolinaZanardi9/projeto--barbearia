@@ -30,7 +30,7 @@ html body {
 }
 
 .text-section h1 {
-  font-size: 64px;
+  font-size: 58px;
   margin-bottom: 20px;
 }
 
@@ -78,7 +78,7 @@ html body {
 }
 
 .image-section img {
-  max-width: 100%;
+  max-width: 90%;
   height: auto;
   border-radius: 12px;
   margin-top: 60px;
@@ -89,8 +89,8 @@ html body {
   background-image: url('assets/BB.jpg');
   background-size: 100% 100% ;
   background-position: center;
-  background-repeat: inherit;
-  padding: 50px;
+  background-repeat: no-repeat;
+  padding: 50px 10px;
   max-width: 100%;
   height: auto;
   margin-top: 0;
@@ -101,6 +101,7 @@ html body {
   font-size: 48px;
   margin-bottom: 40px;
   padding-bottom: 10px;
+  padding-left: 10px;
 }
 
 /* Cards */
@@ -108,7 +109,8 @@ html body {
   display: flex;
   gap: 20px;
   flex-wrap: wrap;
-  margin-bottom: 40px;
+  margin-bottom: 30px;
+  padding-left: 5%;
 }
 
 .card {
@@ -117,7 +119,7 @@ html body {
   border-radius: 12px;
   flex: 0;
   min-width: 350px;
-  max-width: 550px;
+  max-width: 500px;
   box-shadow: 0 0 15px rgba(0,0,0,0.3);
   font-size: 24px;
   gap: 20px;
@@ -140,7 +142,7 @@ html body {
   border-radius: 12px;
   flex: 0;
   min-width: 350px;
-  max-width: 550px;
+  max-width: 500px;
   box-shadow: 0 0 15px rgba(0,0,0,0.3);
   font-size: 24px;
   gap: 20px;
